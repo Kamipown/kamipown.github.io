@@ -2,8 +2,13 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8"/>
-		<meta description="">
+		<meta name="description" content="Free Web tutorials">
+		<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+		<meta name="author" content="Paul Delobbel">
+		<meta name="Identifier-url" content="https://kamipown.github.io/">
+
 		<title>Paul Delobbel</title>
+
 		<link rel="stylesheet" type="text/css" href="styles/style.css"/>
 		<link rel="icon" type="image/png" href="img/tmp.png"/>
 	</head>
@@ -11,9 +16,9 @@
 		<header id="main_header" ng-include="'templates/header.html'"></header>
 		<nav id="main_nav" ng-include="'templates/nav.html'"></nav>
 
-		<!-- <div id="main_div" ng-view></div> -->
+		<div id="main_div" ng-view></div>
 
-		<!-- <footer id="main_footer" ng-include="templates/footer.html"></footer> -->
+		<footer id="main_footer" ng-include="'templates/footer.html'"></footer>
 
 		<script type="text/javascript" src="scripts/angular.js"></script>
 		<script type="text/javascript" src="scripts/angular_routes.js"></script>

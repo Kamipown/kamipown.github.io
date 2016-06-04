@@ -10,9 +10,15 @@ h1 { margin: 0px; font-family: "Oswald"; font-weight: 400;}
 p { margin: 0px;}
 
 #main_header { width: 100%; height: 64px; border-bottom: 1px solid #ddd; background-color: #fff; overflow: hidden;}
-	#main_header > div { max-width: 800px; height: 64px; margin: auto;}
-		#main_header > div > h1 { line-height: 64px; padding-left: 10px; font-size: 32px;}
+	#main_header > div { max-width: 800px; height: 64px; margin: auto; padding: 0px 10px;}
+		#main_header > div > h1 { line-height: 64px; font-size: 32px;}
 
 #main_nav { width: 100%; height: 32px; border-bottom: 1px solid #ddd; background-color: #fafafa;}
 	#main_nav > div { max-width: 800px; height: 32px; border-left: 1px solid #ddd; margin: auto;}
 		#main_nav > div > a { display: inline-block; height: 32px; line-height: 32px; padding: 0px 10px; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; background-color: #fafafa; font-size: 14px; color: #06f; text-decoration: none;}
+
+#main_div { max-width: 800px; min-height: calc(100% - 224px); margin: auto; padding: 0px 10px;}
+
+#main_footer { width: 100%; height: 128px; border-top: 1px solid #222; background-color: #333; color: #eee;}
+	#main_footer > div { max-width: 800px; margin: auto; padding: 0px 10px;}
+		#main_footer > div > p { font-size: 14px;}
