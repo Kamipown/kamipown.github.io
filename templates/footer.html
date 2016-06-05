@@ -1,3 +1,26 @@
 <div>
-	<p>Paul Delobbel</p>
+	<div class="left">
+		<p class="phrase">Vous pouvez m'appeler ou me laisser un message au numéro suivant :</p>
+		<p class="phone" ng-click="display_phone();">{{phone_number}}</p>
+		<p class="phrase">(Cliquez dessus pour le passer de binaire à décimal, c'est pour éviter les bots...)</p>
+	</div>
+
+	<div class="right">
+		<p>Vous pouvez également me laisser un mail via ce formulaire :</p>
+		<form action="#">
+			<label>Email <span>*</span></label>
+			<input type="email" name="email" required>
+			<div class="left">
+				<label>Prénom <span>*</span></label>
+				<input type="text" name="prenom" required>
+			</div>
+			<div class="right">
+				<label>Nom <span>*</span></label>
+				<input type="text" name="nom" required>
+			</div>
+			<label>Message <span>*</span></label>
+			<textarea name="message" required></textarea>
+			<input type="submit">
+		</form>
+	</div>
 </div>

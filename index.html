@@ -19,10 +19,11 @@
 
 		<div id="main_div" ng-view></div>
 
-		<footer id="main_footer" ng-include="'templates/footer.html'"></footer>
+		<footer id="main_footer" ng-include="'templates/footer.html'" ng-controller="footer_ctrl"></footer>
 
 		<script type="text/javascript" src="scripts/angular.js"></script>
 		<script type="text/javascript" src="scripts/angular_routes.js"></script>
 		<script type="text/javascript" src="scripts/app.js"></script>
+		<script type="text/javascript" src="scripts/controllers/footer_ctrl.js"></script>
 	</body>
 </html>
