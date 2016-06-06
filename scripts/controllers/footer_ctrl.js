@@ -6,6 +6,11 @@ app.controller("footer_ctrl", function($scope, $http)
 	$scope.email_address = "zbp.yvnzt@yroobyrq.yhnc";
 	$scope.email_decoded = false;
 
+	$scope._replyto = "";
+	$scope.prenom = "";
+	$scope.nom = "";
+	$scope.message = "";
+
 	$scope.decode_phone = function()
 	{
 		if (!$scope.phone_decoded)
@@ -21,15 +26,15 @@ app.controller("footer_ctrl", function($scope, $http)
 		$scope.email_decoded = true;
 	}
 
-	$scope.send_email = function()
+	$scope.send_email = function(data)
 	{
-		var data =
-		{
-			_replyto: $scope._replyto,
-			prenom: $scope.prenom,
-			nom: $scope.nom,
-			message: $scope.message
-		}
+		// var data =
+		// {
+		// 	_replyto: $scope._replyto,
+		// 	prenom: $scope.prenom,
+		// 	nom: $scope.nom,
+		// 	message: $scope.message
+		// }
 
 		console.log(data);
 
