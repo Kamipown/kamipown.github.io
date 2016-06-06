@@ -16,7 +16,7 @@ app.controller("footer_ctrl", function($scope, $timeout)
 	$scope.decode_email = function()
 	{
 		if (!$scope.email_decoded)
-			alert("Email decoded from\nzbp.yvnzt@yroobyrq.yhnc\nto\n" + ($scope.email_address.replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);})).split("").reverse().join(""));
+			document.getElementById("footer_form").action = "https://formspree.io/" + ($scope.email_address.replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);})).split("").reverse().join("");
 		$scope.email_decoded = true;
 	}
 });
