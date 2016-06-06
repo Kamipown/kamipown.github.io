@@ -7,19 +7,19 @@
 
 	<div class="right">
 		<p>Vous pouvez également me laisser un mail via ce formulaire :</p>
-		<form id="footer_form" method="POST" action="https://formspree.io/" ng-click="decode_email();">
+		<form ng-submit="send_email();" ng-click="decode_email();">
 			<label>Email <span>*</span></label>
-			<input type="email" name="_replyto" required ng-focus="decode_email();">
+			<input type="email" ng-model="_replyto" required ng-focus="decode_email();">
 			<div class="left">
 				<label>Prénom <span>*</span></label>
-				<input type="text" name="prenom" required ng-focus="decode_email();">
+				<input type="text" ng-model="prenom" required ng-focus="decode_email();">
 			</div>
 			<div class="right">
 				<label>Nom <span>*</span></label>
-				<input type="text" name="nom" required ng-focus="decode_email();">
+				<input type="text" ng-model="nom" required ng-focus="decode_email();">
 			</div>
 			<label>Message <span>*</span></label>
-			<textarea name="message" required ng-focus="decode_email();"></textarea>
+			<textarea ng-model="message" required ng-focus="decode_email();"></textarea>
 			<input type="submit" value="Emvoyer">
 		</form>
 	</div>
