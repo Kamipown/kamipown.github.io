@@ -31,6 +31,8 @@ app.controller("footer_ctrl", function($scope, $http)
 			message: $scope.message
 		}
 
+		console.log(data);
+
 		$http.post("https://formspree.io/" + $scope.email_address, data)
 		.success(function(data, status)
 		{
