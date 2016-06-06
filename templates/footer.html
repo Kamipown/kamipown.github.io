@@ -7,20 +7,20 @@
 
 	<div class="right">
 		<p>Vous pouvez également me laisser un mail via ce formulaire :</p>
-		<form ng-submit="send_email(data);" ng-click="decode_email();">
+		<form ng-submit="send_email(data);">
 			<label>Email <span>*</span></label>
-			<input type="email" ng-model="data._replyto" required ng-focus="decode_email();">
+			<input type="email" ng-model="data._replyto" required>
 			<div class="left">
 				<label>Prénom <span>*</span></label>
-				<input type="text" ng-model="data.prenom" required ng-focus="decode_email();">
+				<input type="text" ng-model="data.prenom" required>
 			</div>
 			<div class="right">
 				<label>Nom <span>*</span></label>
-				<input type="text" ng-model="data.nom" required ng-focus="decode_email();">
+				<input type="text" ng-model="data.nom" required>
 			</div>
 			<label>Message <span>*</span></label>
-			<textarea ng-model="data.message" required ng-focus="decode_email();"></textarea>
-			<input type="submit" value="Emvoyer">
+			<textarea ng-model="data.message" required></textarea>
+			<input type="submit" value="Envoyer">
 		</form>
 	</div>
 </div>

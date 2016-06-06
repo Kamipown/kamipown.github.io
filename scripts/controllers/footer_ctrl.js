@@ -6,11 +6,6 @@ app.controller("footer_ctrl", function($scope, $http)
 	$scope.email_address = "zbp.yvnzt@yroobyrq.yhnc";
 	$scope.email_decoded = false;
 
-	$scope._replyto = "";
-	$scope.prenom = "";
-	$scope.nom = "";
-	$scope.message = "";
-
 	$scope.decode_phone = function()
 	{
 		if (!$scope.phone_decoded)
@@ -21,33 +16,26 @@ app.controller("footer_ctrl", function($scope, $http)
 	$scope.decode_email = function()
 	{
 		if (!$scope.email_decoded)
-			$scope.email_address = ($scope.email_address.replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);})).split("").reverse().join("");
-		// document.getElementById("footer_form").action = "https://formspree.io/" + ($scope.email_address.replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);})).split("").reverse().join("");
-		$scope.email_decoded = true;
+		{
+			$scope.email_decoded = true;
+			return (($scope.email_address = ($scope.email_address.replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);})).split("").reverse().join("")));
+		}
+		else
+			return ($scope.email_address);
 	}
 
 	$scope.send_email = function(data)
 	{
-		// var data =
-		// {
-		// 	_replyto: $scope._replyto,
-		// 	prenom: $scope.prenom,
-		// 	nom: $scope.nom,
-		// 	message: $scope.message
-		// }
-
-		console.log(data);
-
-		$http.post("https://formspree.io/" + $scope.email_address, data)
+		$http.post("https://formspree.io/" + $scope.decode_email(), data)
 		.success(function(data, status)
 		{
-			console.log(data);
-			console.log(status);
+			// console.log(data);
+			// console.log(status);
 		})
 		.error(function(data, status)
 		{
-			console.log(data);
-			console.log(status);
+			// console.log(data);
+			// console.log(status);
 		});
 	}
 });
