@@ -29,13 +29,28 @@ app.controller("footer_ctrl", function($scope, $http)
 		$http.post("https://formspree.io/" + $scope.decode_email(), data)
 		.success(function(data, status)
 		{
-			console.log("Envoi du formulaire reussi : " + status);
-			console.log(data);
+			if (status == 200)
+				$scope.display_form_success();
+			else
+			{
+				$scope.display_form_error(status);
+				console.log(data);
+			}
 		})
 		.error(function(data, status)
 		{
-			console.log("Envoi du formulaire echoue : " + status);
+			$scope.display_form_error(status);
 			console.log(data);
 		});
+	}
+
+	$scope.display_form_success = function()
+	{
+		console.log("Envoi du formulaire reussi !");
+	}
+
+	$scope.display_form_error = function(status)
+	{
+		console.log("Envoi du formulaire echoue :/" + status);
 	}
 });
