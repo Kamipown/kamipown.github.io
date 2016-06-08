@@ -52,7 +52,7 @@ app.controller("footer_ctrl", function($scope, $http)
 		$scope.show_form_process = false;
 		$scope.show_form_success = true;
 		console.log("Envoi du formulaire reussi : " + status);
-		console.log(status);
+		console.log(data);
 	}
 
 	$scope.display_form_error = function(data, status)
@@ -60,6 +60,6 @@ app.controller("footer_ctrl", function($scope, $http)
 		$scope.show_form_process = false;
 		$scope.show_form_error = true;
 		console.log("Envoi du formulaire echoue : " + status);
-		console.log(status);
+		console.log(data);
 	}
 });
