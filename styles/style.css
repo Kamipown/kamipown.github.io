@@ -1,4 +1,3 @@
-/*@font-face { font-family: "Roboto"; src: url("../fnt/Roboto-Regular.ttf");}*/
 @import url("https://fonts.googleapis.com/css?family=Roboto:400");
 @import url("https://fonts.googleapis.com/css?family=Oswald:400");
 
@@ -20,17 +19,18 @@ a { color: #006df0; text-decoration: none;}
 		#main_nav > div > a.github { padding-left: 40px; background-image: url("../img/github.svg"); background-size: 20px 20px; background-position: 10px 10px; background-repeat: no-repeat;}
 		#main_nav > div > a:hover { border-bottom: 1px solid #006df0;}
 
-#main_div { max-width: 800px; min-height: calc(100% - 495px); margin: auto; padding: 0px 10px;}
+#main_div { max-width: 800px; margin: auto; padding: 0px 10px;}
 	#main_div .view { }
 
 #main_footer { width: 100%; border-top: 1px solid #111; background-color: #222; color: #fff;}
-	#main_footer > div { max-width: 800px; margin: auto;}
+	#main_footer > div { display: table; max-width: 800px; margin: auto;}
 		#main_footer > div > .left { padding: 20px;}
 			#main_footer > div > .left > .phrase { font-size: 16px;}
 			#main_footer > div > .left > .phone { padding: 20px 0px; font-size: 20px; color: #006df0; cursor: pointer; word-wrap: break-word;}
 			#main_footer > div > .left > .phone:hover { color: #2090f0;}
 		#main_footer > div > .right { padding: 20px;}
 			#main_footer > div > .right > p { font-size: 16px;}
+			#main_footer > div > .right > img { display: block; width: 24px; height: 24px; margin: 20px auto; animation: spinner 600ms ease infinite;}
 			#main_footer > div > .right > form { padding-top: 20px;}
 				#main_footer > div > .right > form label { display: block; height: 30px; line-height: 30px; margin-top: 10px; font-size: 16px;}
 					#main_footer > div > .right > form label > span { color: #c55;}
@@ -47,8 +47,8 @@ a { color: #006df0; text-decoration: none;}
 
 @media (min-width: 600px)
 {
-		#main_footer > div > .left { display: inline-block; vertical-align: top; width: 50%;}
-		#main_footer > div > .right { display: inline-block; vertical-align: top; width: 50%; border-left: 1px solid #111;}
+		#main_footer > div > .left { display: table-cell; vertical-align: top; width: 50%; max-width: 50%; min-width: 50%;}
+		#main_footer > div > .right { display: table-cell; vertical-align: top; width: 50%; max-width: 50%; min-width: 50%; border-left: 1px solid #111;}
 }
 
 @media (max-width: 599px)
@@ -56,3 +56,10 @@ a { color: #006df0; text-decoration: none;}
 		#main_footer > div > .left { display: block; width: 100%; border-bottom: 1px solid #111;}
 		#main_footer > div > .right { display: block; width: 100%;}
 }
+
+@keyframes spinner {to {transform: rotate(360deg);}}
+@-o-keyframes spinner {to {transform: rotate(360deg);}}
+@-ms-keyframes spinner {to {transform: rotate(360deg);}}
+@-moz-keyframes spinner {to {transform: rotate(360deg);}}
+@-khtml-keyframes spinner {to {transform: rotate(360deg);}}
+@-webkit-keyframes spinner {to {transform: rotate(360deg);}}

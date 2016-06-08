@@ -6,6 +6,11 @@ app.controller("footer_ctrl", function($scope, $http)
 	$scope.email_address = "zbp.yvnzt@yroobyrq.yhnc";
 	$scope.email_decoded = false;
 
+	$scope.show_form = true;
+	$scope.show_form_process = false;
+	$scope.show_form_success = false;
+	$scope.show_form_error = false;
+
 	$scope.decode_phone = function()
 	{
 		if (!$scope.phone_decoded)
@@ -26,31 +31,35 @@ app.controller("footer_ctrl", function($scope, $http)
 
 	$scope.send_email = function(data)
 	{
+		$scope.show_form = false;
+		$scope.show_form_process = true;
 		$http.post("https://formspree.io/" + $scope.decode_email(), data)
 		.success(function(data, status)
 		{
 			if (status == 200)
-				$scope.display_form_success();
+				$scope.display_form_success(data, status);
 			else
-			{
-				$scope.display_form_error(status);
-				console.log(data);
-			}
+				$scope.display_form_error(data, status);
 		})
 		.error(function(data, status)
 		{
-			$scope.display_form_error(status);
-			console.log(data);
+			$scope.display_form_error(data, status);
 		});
 	}
 
-	$scope.display_form_success = function()
+	$scope.display_form_success = function(data, status)
 	{
-		console.log("Envoi du formulaire reussi !");
+		$scope.show_form_process = false;
+		$scope.show_form_success = true;
+		console.log("Envoi du formulaire reussi : " + status);
+		console.log(status);
 	}
 
-	$scope.display_form_error = function(status)
+	$scope.display_form_error = function(data, status)
 	{
-		console.log("Envoi du formulaire echoue :/" + status);
+		$scope.show_form_process = false;
+		$scope.show_form_error = true;
+		console.log("Envoi du formulaire echoue : " + status);
+		console.log(status);
 	}
 });
