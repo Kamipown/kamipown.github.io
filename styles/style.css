@@ -23,10 +23,10 @@ a { color: #006df0; text-decoration: none;}
 	#main_div .view { }
 
 #main_footer { width: 100%; border-top: 1px solid #111; background-color: #222; color: #fff;}
-	#main_footer > div { display: table; max-width: 800px; margin: auto;}
-		#main_footer > div > .left { padding: 20px;}
+	#main_footer > div { max-width: 800px; margin: auto;}
+		#main_footer > div > .left { padding: 20px; overflow: hidden;}
 			#main_footer > div > .left > .phrase { font-size: 16px;}
-			#main_footer > div > .left > .phone { padding: 20px 0px; font-size: 20px; color: #006df0; cursor: pointer; word-wrap: break-word;}
+			#main_footer > div > .left > .phone { padding: 20px 0px; font-size: 20px; color: #006df0; cursor: pointer; text-overflow: ellipsis;}
 			#main_footer > div > .left > .phone:hover { color: #2090f0;}
 		#main_footer > div > .right { padding: 20px;}
 			#main_footer > div > .right > p { font-size: 16px;}
@@ -47,8 +47,8 @@ a { color: #006df0; text-decoration: none;}
 
 @media (min-width: 600px)
 {
-		#main_footer > div > .left { display: table-cell; vertical-align: top; width: 50%; max-width: 50%; min-width: 50%;}
-		#main_footer > div > .right { display: table-cell; vertical-align: top; width: 50%; max-width: 50%; min-width: 50%; border-left: 1px solid #111;}
+		#main_footer > div > .left { display: inline-block; vertical-align: top; width: 50%; max-width: 50%; min-width: 50%; border-right: 1px solid #111;}
+		#main_footer > div > .right { display: inline-block; vertical-align: top; width: 50%; max-width: 50%; min-width: 50%; margin-left: -1px; border-left: 1px solid #111;}
 }
 
 @media (max-width: 599px)
