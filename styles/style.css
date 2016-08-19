@@ -23,11 +23,7 @@ a { color: #006df0; text-decoration: none;}
 #main_div { width: 100%;}
 	#main_div > .view { display: block; max-width: 800px; margin: auto;}
 		#main_div > .view > section { margin-top: 40px; box-shadow: 0px 0px 2px #aaa; background-color: #eee;}
-		#main_div > .view > section.white { background-color: #eee;}
-		#main_div > .view > section.blue { background-color: #1976d2;}
-			#main_div > .view > section > h2 { padding: 20px; font-size: 28px;}
-			#main_div > .view > section.white > h2 { color: #333;}
-			#main_div > .view > section.blue > h2 { color: #fff;}
+			#main_div > .view > section > h2 { padding: 20px; font-size: 28px; color: #333;}
 			#main_div > .view > section > .title_separator { display: block; width: 42px; height: 5px; background-color: #2196f3;}
 			#main_div > .view > section.white > .title_separator { background-color: #2196f3;}
 			#main_div > .view > section.blue > .title_separator { background-color: #fff;}
@@ -39,9 +35,9 @@ a { color: #006df0; text-decoration: none;}
 		#home_view > .skill { }
 			#home_view > .skill > .skills { display: block; padding: 20px 20px;}
 				#home_view > .skill > .skills > div { display: block;}
-					#home_view > .skill > .skills > div > p { display: block; height: 32px; line-height: 32px; margin-top: 20px; font-size: 24px; color: #fff;}
-					#home_view > .skill > .skills > div > .progress_bar { display: block; width: 100%; height: 10px; background-color: #1565c0;}
-						#home_view > .skill > .skills > div > .progress_bar > .progress { display: block; height: 10px; background-color: #fff;}
+					#home_view > .skill > .skills > div > p { display: block; height: 32px; line-height: 32px; margin-top: 20px; font-size: 20px;}
+					#home_view > .skill > .skills > div > .progress_bar { display: block; width: 100%; height: 8px; background-color: #ccc;}
+						#home_view > .skill > .skills > div > .progress_bar > .progress { display: block; height: 8px; background-color: #2196f3;}
 
 #main_footer { width: 100%; margin-top: 40px; border-top: 1px solid #111; background-color: #222; box-shadow: 0px 0px 4px #333; color: #fff;}
 	#main_footer > div { max-width: 800px; margin: auto;}
