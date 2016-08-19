@@ -24,43 +24,43 @@ a { color: #006df0; text-decoration: none;}
 	#main_div > .view { display: block; max-width: 800px; margin: auto;}
 		#main_div > .view > section { margin-top: 40px; box-shadow: 0px 0px 2px #aaa; background-color: #eee;}
 		#main_div > .view > section.white { background-color: #eee;}
-		#main_div > .view > section.blue { background-color: #1976d2;}
+		#main_div > .view > section.blue { background-color: #eee;}
 			#main_div > .view > section > h2 { padding: 20px; font-size: 28px;}
 			#main_div > .view > section.white > h2 { color: #333;}
-			#main_div > .view > section.blue > h2 { color: #fff;}
+			#main_div > .view > section.blue > h2 { color: #333;}
 			#main_div > .view > section > .title_separator { display: block; width: 42px; height: 5px; background-color: #2196f3;}
 			#main_div > .view > section.white > .title_separator { background-color: #2196f3;}
-			#main_div > .view > section.blue > .title_separator { background-color: #fff;}
+			#main_div > .view > section.blue > .title_separator { background-color: #2196f3;}
 
 	#home_view {}
-		#home_view > .presentation { background-image: url("../img/grey_link.png"); background-position: calc(100% - 20px) calc(100% - 20px); background-repeat: no-repeat; background-size: 100px 100px;}
+		#home_view > .presentation {}
 			#home_view > .presentation > h2 {}
 			#home_view > .presentation > p { max-width: 400px; line-height: 32px; padding: 20px; font-size: 16px;}
 		#home_view > .skill { }
 			#home_view > .skill > .skills { display: block; padding: 20px 20px;}
 				#home_view > .skill > .skills > div { display: block;}
-					#home_view > .skill > .skills > div > p { display: block; height: 32px; line-height: 32px; margin-top: 20px; font-size: 24px; color: #fff;}
-					#home_view > .skill > .skills > div > .progress_bar { display: block; width: 100%; height: 10px; background-color: #1565c0;}
-						#home_view > .skill > .skills > div > .progress_bar > .progress { display: block; height: 10px; background-color: #fff;}
+					#home_view > .skill > .skills > div > p { display: block; height: 32px; line-height: 32px; margin-top: 20px; font-size: 20px; color: #333;}
+					#home_view > .skill > .skills > div > .progress_bar { display: block; width: 100%; height: 10px; background-color: #ccc;}
+						#home_view > .skill > .skills > div > .progress_bar > .progress { display: block; width: 0%; height: 10px; background-color: #2196f3; transition: all 500ms ease;}
 
 #main_footer { width: 100%; margin-top: 40px; border-top: 1px solid #111; background-color: #222; box-shadow: 0px 0px 4px #333; color: #fff;}
 	#main_footer > div { max-width: 800px; margin: auto;}
 		#main_footer > div > .left { padding: 20px; overflow: hidden;}
 			#main_footer > div > .left > .phrase { font-size: 16px;}
-			#main_footer > div > .left > .phone { padding: 20px 0px; font-size: 20px; color: #006df0; cursor: pointer; text-overflow: ellipsis;}
-			#main_footer > div > .left > .phone:hover { color: #2090f0;}
+			#main_footer > div > .left > .phone { padding: 20px 0px; font-size: 20px; color: #2196f3; cursor: pointer; text-overflow: ellipsis;}
+			#main_footer > div > .left > .phone:hover { color: #64b5f6;}
 		#main_footer > div > .right { padding: 20px;}
 			#main_footer > div > .right > p { font-size: 16px;}
 			#main_footer > div > .right > img { display: block; width: 24px; height: 24px; margin: 20px auto; animation: spinner 600ms ease infinite;}
 			#main_footer > div > .right > form { padding-top: 20px;}
 				#main_footer > div > .right > form label { display: block; height: 30px; line-height: 30px; margin-top: 10px; font-size: 16px;}
-					#main_footer > div > .right > form label > span { color: #c55;}
+					#main_footer > div > .right > form label > span { color: #f44336;}
 				#main_footer > div > .right > form input { display: block; width: 100%; height: 40px; border: 1px solid #111; color: #fff;}
 				#main_footer > div > .right > form > input[type=email] { padding: 0px 10px; background-color: #333;}
 				#main_footer > div > .right > form input[type=text] { padding: 0px 10px; background-color: #333;}
 				#main_footer > div > .right > form > textarea { display: block; width: 100%; min-height: 80px; padding: 10px; border: 1px solid #111; background-color: #333; color: #fff; resize: vertical;}
-				#main_footer > div > .right > form > input[type=submit] { margin-top: 20px; background-color: #006df0; cursor: pointer;}
-				#main_footer > div > .right > form > input[type=submit]:hover { background-color: #2090f0;}
+				#main_footer > div > .right > form > input[type=submit] { margin-top: 20px; background-color: #2196f3; cursor: pointer;}
+				#main_footer > div > .right > form > input[type=submit]:hover { background-color: #64b5f6;}
 					#main_footer > div > .right > form > div { display: inline-block; vertical-align: top; width: 50%;}
 					#main_footer > div > .right > form > .left { padding-right: 10px;}
 					#main_footer > div > .right > form > .right { padding-left: 10px;}
@@ -76,6 +76,11 @@ a { color: #006df0; text-decoration: none;}
 {
 		#main_footer > div > .left { display: block; width: 100%; border-bottom: 1px solid #111;}
 		#main_footer > div > .right { display: block; width: 100%;}
+}
+
+@media (min-width: 500px)
+{
+		#home_view > .presentation { background-image: url("../img/grey_link.png"); background-position: calc(100% - 20px) calc(100% - 20px); background-repeat: no-repeat; background-size: 100px 100px;}
 }
 
 @keyframes spinner {to {transform: rotate(360deg);}}
