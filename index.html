@@ -2,30 +2,27 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8"/>
-		<meta name="description" content="Portfolio">
-		<meta name="keywords" content="C,C++,C#,HTML,CSS,JavaScript">
+		<meta name="description" content="SdlDev est une plateforme pour apprendre le developpement de jeux video en utilisant la SDL2.">
+		<meta name="keywords" content="SDL,SDL2,c,c++,dev,programmation,developpement,jeux">
 		<meta name="author" content="Paul Delobbel">
-		<meta name="Identifier-url" content="https://kamipown.github.io/">
+		<meta name="Identifier-url" content="https://sdldev.github.io/">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<title>Paul Delobbel</title>
 
 		<link rel="stylesheet" type="text/css" href="styles/style.css"/>
-		<link rel="icon" type="image/png" href="img/tmp.png"/>
+		<link rel="icon" type="image/jpg" href="img/me.jpg"/>
 	</head>
 	<body ng-app="app">
-		<header id="main_header" ng-include="'templates/header.html'"></header>
+		<header id="main_header" ng-include="'template/header.html'"></header>
 
-		<nav id="main_nav" ng-include="'templates/nav.html'"></nav>
+		<main id="main" role="main" ng-view></main>
 
-		<div id="main_div" ng-view></div>
-
-		<footer id="main_footer" ng-include="'templates/footer.html'" ng-controller="footer_ctrl"></footer>
-
-		<script type="text/javascript" src="scripts/angular.js"></script>
-		<script type="text/javascript" src="scripts/angular_routes.js"></script>
+		<script type="text/javascript" src="https://code.angularjs.org/1.5.8/angular.min.js"></script>
+		<script type="text/javascript" src="https://code.angularjs.org/1.5.8/angular-route.min.js"></script>
 		<script type="text/javascript" src="scripts/app.js"></script>
-		<script type="text/javascript" src="scripts/controllers/home_ctrl.js"></script>
-		<script type="text/javascript" src="scripts/controllers/footer_ctrl.js"></script>
+		<script type="text/javascript" src="scripts/controllers/contact_ctrl.js"></script>
+		<script type="text/javascript" src="scripts/controllers/404_ctrl.js"></script>
+		<script type="text/javascript" src="scripts/script.js"></script>
 	</body>
 </html>

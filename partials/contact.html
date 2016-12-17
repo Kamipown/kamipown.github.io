@@ -1,0 +1,35 @@
+<div id="contact_view" class="view">
+	<section>
+		<p>Vous pouvez m'appeler ou me laisser un message au numéro suivant :</p>
+		<p class="phone">{{numero}}</p>
+	</section>
+
+	<section ng-show="show_form">
+		<p>Vous pouvez également m'envoyer un mail via ce formulaire :</p>
+		<form ng-submit="send_email(data);">
+			<div class="mail">
+				<label>Votre email <span>{{email_error}}</span></label>
+				<input type="email" ng-model="data._replyto" minlength="5" required onfocus="focus_email_input();" onblur="blur_email_input(this);">
+			</div>
+			<div class="message">
+				<label>Votre message <span>{{message_error}}</span></label>
+				<textarea ng-model="data.message" minlength="10" required onfocus="focus_message_input();" onblur="blur_message_input(this);"></textarea>
+			</div>
+			<input type="submit" value="Envoyer">
+		</form>
+	</section>
+
+	<section ng-show="show_form_process">
+		<img src="img/spinner.svg" alt="Envoi de votre email en cours...">
+	</section>
+
+	<section ng-show="show_form_success">
+		<p>J'ai bien recu votre email !</p>
+		<p>Je vais y répondre au plus vite.</p>
+	</section>
+
+	<section ng-show="show_form_error">
+		<p>Je n'ai pas recu votre email :( !</p>
+		<p>Vous pourriez peut-etre me contacter par telephone ?</p>
+</section>
+</div>

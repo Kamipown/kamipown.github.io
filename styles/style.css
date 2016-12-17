@@ -1,82 +1,121 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:400");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 @import url("https://fonts.googleapis.com/css?family=Oswald:400");
 
-* { box-sizing: border-box;}
+* { box-sizing: border-box; vertical-align: top; outline: none;}
 html { height: 100%;}
-body { height: 100%; margin: 0px; background-color: #ddd; font-family: "Roboto"; font-size: 0px; color: #333;}
+body { height: 100%; margin: 0px; background-color: #eee; font-family: "Roboto"; font-size: 0px; color: #333;}
 input, textarea { padding: 0px; outline: none; box-shadow: none; font-family: "Roboto"; font-size: 16px;}
+input:focus, input:active { outline: none;}
+input::-moz-focus-inner { border: none;}
 h1 { margin: 0px; font-family: "Oswald"; font-weight: 400;}
-h2 { margin: 0px; font-family: "Oswald"; font-weight: 400;}
+h2 { margin: 0px; font-family: "Roboto"; font-weight: 500;}
+h3 { margin: 0px; font-family: "Roboto"; font-weight: 500;}
 p { margin: 0px;}
-a { color: #006df0; text-decoration: none;}
+a { color: #333; text-decoration: none;}
 
-#main_header { position: relative; width: 100%; height: 60px; border-bottom: 1px solid #1976d2; background-color: #2196f3; overflow: hidden;}
-	#main_header > div { max-width: 800px; height: 60px; margin: auto; padding: 0px 10px;}
-		#main_header > div > h1 { line-height: 60px; font-size: 32px; color: #fff;}
+#main_header { display: block; position: relative; width: 100%; text-align: center;}
+	#main_header > a { display: inline-block; text-transform: uppercase; font-weight: 300;}
+	#main_header > a.active { color: #c55;}
+	#main_header > a:hover { color: #c55;}
+	#main_header > h1 { display: inline-block; border: 2px solid #222; border-radius: 50%; overflow: hidden;}
+		#main_header > h1 > img { display: block;}
 
-#main_nav { width: 100%; height: 40px; border-bottom: 1px solid #1976d2; box-shadow: 0px 0px 4px #333; background-color: #1e88e5;}
-	#main_nav > div { max-width: 800px; height: 40px; border-left: 1px solid #1976d2; margin: auto;}
-		#main_nav > div > a { display: inline-block; height: 40px; line-height: 40px; padding: 0px 10px; border-right: 1px solid #1976d2; font-size: 16px; color: #eee; transition: all 250ms ease;}
-		#main_nav > div > a.github { padding-left: 40px; background-image: url("../img/github.svg"); background-size: 20px 20px; background-position: 10px 10px; background-repeat: no-repeat;}
-		#main_nav > div > a:hover { background-color: #1565c0; color: #fff;}
+#main { display: block; width: 100%;}
+	#main > .view { display: block; width: 100%;}
+		#main > .view > section { display: block; width: 100%;}
 
-#main_div { width: 100%;}
-	#main_div > .view { display: block; max-width: 800px; margin: auto;}
-		#main_div > .view > section { margin-top: 40px; box-shadow: 0px 0px 2px #aaa; background-color: #eee;}
-			#main_div > .view > section > h2 { padding: 20px; font-size: 28px; color: #333;}
-			#main_div > .view > section > .title_separator { display: block; width: 42px; height: 5px; background-color: #2196f3;}
-			#main_div > .view > section.white > .title_separator { background-color: #2196f3;}
-			#main_div > .view > section.blue > .title_separator { background-color: #fff;}
+#home_view { text-align: center;}
+	#home_view > .presentation {}
+		#home_view > .presentation > p { margin: auto; font-weight: 300;}
 
-	#home_view {}
-		#home_view > .presentation { background-image: url("../img/grey_link.png"); background-position: calc(100% - 20px) calc(100% - 20px); background-repeat: no-repeat; background-size: 100px 100px;}
-			#home_view > .presentation > h2 {}
-			#home_view > .presentation > p { max-width: 400px; line-height: 32px; padding: 20px; font-size: 16px;}
-		#home_view > .skill { }
-			#home_view > .skill > .skills { display: block; padding: 20px 20px;}
-				#home_view > .skill > .skills > div { display: block;}
-					#home_view > .skill > .skills > div > p { display: block; height: 32px; line-height: 32px; margin-top: 20px; font-size: 20px;}
-					#home_view > .skill > .skills > div > .progress_bar { display: block; width: 100%; height: 8px; background-color: #ccc;}
-						#home_view > .skill > .skills > div > .progress_bar > .progress { display: block; height: 8px; background-color: #2196f3;}
+#projects_view { max-width: 1200px; margin: auto;}
+	#projects_view > .project { padding: 40px;}
+		#projects_view > .project > h2 { padding: 20px 0px; font-size: 20px; font-weight: 300; text-transform: uppercase;}
+		#projects_view > .project > .separator { display: block; width: 200px; height: 1px; margin-bottom: 20px; border-bottom: 1px solid #aaa;}
+		#projects_view > .project > p { line-height: 30px;}
+		#projects_view > .project > p.description { max-width: 1200px; font-size: 16px;}
+		#projects_view > .project > p.sources { margin: 20px 0px; font-size: 14px;}
+			#projects_view > .project > p.sources > a { color: #09f;}
+		#projects_view > .project > div.screenshots {}
+			#projects_view > .project > div.screenshots > img { display: inline-block; max-width: 400px; margin: 0px 20px 20px 0px; border: 1px solid #333;}
 
-#main_footer { width: 100%; margin-top: 40px; border-top: 1px solid #111; background-color: #222; box-shadow: 0px 0px 4px #333; color: #fff;}
-	#main_footer > div { max-width: 800px; margin: auto;}
-		#main_footer > div > .left { padding: 20px; overflow: hidden;}
-			#main_footer > div > .left > .phrase { font-size: 16px;}
-			#main_footer > div > .left > .phone { padding: 20px 0px; font-size: 20px; color: #006df0; cursor: pointer; text-overflow: ellipsis;}
-			#main_footer > div > .left > .phone:hover { color: #2090f0;}
-		#main_footer > div > .right { padding: 20px;}
-			#main_footer > div > .right > p { font-size: 16px;}
-			#main_footer > div > .right > img { display: block; width: 24px; height: 24px; margin: 20px auto; animation: spinner 600ms ease infinite;}
-			#main_footer > div > .right > form { padding-top: 20px;}
-				#main_footer > div > .right > form label { display: block; height: 30px; line-height: 30px; margin-top: 10px; font-size: 16px;}
-					#main_footer > div > .right > form label > span { color: #c55;}
-				#main_footer > div > .right > form input { display: block; width: 100%; height: 40px; border: 1px solid #111; color: #fff;}
-				#main_footer > div > .right > form > input[type=email] { padding: 0px 10px; background-color: #333;}
-				#main_footer > div > .right > form input[type=text] { padding: 0px 10px; background-color: #333;}
-				#main_footer > div > .right > form > textarea { display: block; width: 100%; min-height: 80px; padding: 10px; border: 1px solid #111; background-color: #333; color: #fff; resize: vertical;}
-				#main_footer > div > .right > form > input[type=submit] { margin-top: 20px; background-color: #006df0; cursor: pointer;}
-				#main_footer > div > .right > form > input[type=submit]:hover { background-color: #2090f0;}
-					#main_footer > div > .right > form > div { display: inline-block; vertical-align: top; width: 50%;}
-					#main_footer > div > .right > form > .left { padding-right: 10px;}
-					#main_footer > div > .right > form > .right { padding-left: 10px;}
+#contact_view { max-width: 400px; max-height: 200px; margin: 120px auto 0px auto; background-color: #eee;}
+	#contact_view > section {}
+		#contact_view > section > p { font-size: 20px; font-weight: 300;}
+		#contact_view > section > p.phone { margin: 20px; color: #09f;}
+		#contact_view > section > form { margin: 20px;}
+			#contact_view > section > form > div { position: relative; width: 100%; margin-bottom: 20px;}
+			#contact_view > section > form > div.mail { height: 80px;}
+			#contact_view > section > form > div.message { height: 160px;}
+				#contact_view > section > form > div > label { display: block; position: absolute; top: 40px; width: 100%; height: 40px; line-height: 20px; padding: 10px; font-size: 16px; transition: all 250ms ease;}
+					#contact_view > section > form > div > label > span { font-size: 12px; color: #aaa;}
+				#contact_view > section > form > div > input { display: block; position: absolute; top: 40px; width: 100%; height: 40px; padding: 10px; border: none; border-bottom: 1px solid #333; border-left: 1px solid #333; background-color: transparent;}
+				#contact_view > section > form > div > input:invalid { border-bottom: 1px solid #09f; border-left: 1px solid #09f;}
+				#contact_view > section > form > div > textarea {display: block; position: absolute; top: 40px; width: 100%; height: 120px; padding: 10px; border: none; border-bottom: 1px solid #333; border-left: 1px solid #333; background-color: transparent; resize: none;}
+				#contact_view > section > form > div > textarea:invalid { border-bottom: 1px solid #09f; border-left: 1px solid #09f;}
+			#contact_view > section > form > input { padding: 0px 20px; height: 40px;}
 
+@media (min-width: 600px) and (max-width: 800px)
+{
+	
+}
+
+@media (min-width: 1000px)
+{
+#home_view {}
+	#home_view > .presentation {}
+		#home_view > .presentation > p { max-width: 760px; line-height: 60px; padding: 100px 0px; font-size: 32px;}
+}
+
+@media (max-width: 999px)
+{
+#home_view {}
+	#home_view > .presentation {}
+		#home_view > .presentation > p { max-width: 760px; line-height: 60px; padding: 50px 40px; font-size: 28px;}
+}
+
+@media (min-width: 800px)
+{
+#home_view {}
+	#home_view > .specialities {}
+		#home_view > .specialities > article { display: inline-block; width: 33.333%; padding: 10px;}
+			#home_view > .specialities > article > img { width: 120px;}
+			#home_view > .specialities > article > h3 { padding: 20px 0px; font-size: 20px; font-weight: 300; text-transform: uppercase;}
+			#home_view > .specialities > article > div { display: block; width: 200px; height: 1px; margin: 0px auto 20px auto; border-bottom: 1px solid #aaa;}
+			#home_view > .specialities > article > p { line-height: 30px; font-size: 16px;}
+}
+
+@media (max-width: 799px)
+{
+#home_view {}
+	#home_view > .specialities {}
+		#home_view > .specialities > article { display: width: 100%; padding: 20px;}
+			#home_view > .specialities > article > img { width: 120px;}
+			#home_view > .specialities > article > h3 { padding: 20px 0px; font-size: 20px; font-weight: 300; text-transform: uppercase;}
+			#home_view > .specialities > article > div { display: block; width: 200px; height: 1px; margin: 0px auto 20px auto; border-bottom: 1px solid #aaa;}
+			#home_view > .specialities > article > p { max-width: 400px; line-height: 30px; margin: auto; font-size: 16px;}
+}
 
 @media (min-width: 600px)
 {
-		#main_footer > div > .left { display: inline-block; vertical-align: top; width: 50%; max-width: 50%; min-width: 50%; border-right: 1px solid #111;}
-		#main_footer > div > .right { display: inline-block; vertical-align: top; width: 50%; max-width: 50%; min-width: 50%; margin-left: -1px; border-left: 1px solid #111;}
+#main_header {}
+	#main_header > a { height: 80px; line-height: 80px; font-size: 16px;}
+	#main_header > a.left { padding-right: 40px;}
+	#main_header > a.right { padding-left: 40px;}
+	#main_header > h1 { width: 80px; height: 80px;}
+		#main_header > h1 > img { width: 80px;}
+
+#main { }
 }
 
 @media (max-width: 599px)
 {
-		#main_footer > div > .left { display: block; width: 100%; border-bottom: 1px solid #111;}
-		#main_footer > div > .right { display: block; width: 100%;}
-}
+#main_header {}
+	#main_header > a { height: 60px; line-height: 60px; font-size: 14px;}
+	#main_header > a.left { padding-right: 10px;}
+	#main_header > a.right { padding-left: 10px;}
+	#main_header > h1 { width: 60px; height: 60px;}
+		#main_header > h1 > img { width: 60px;}
 
-@keyframes spinner {to {transform: rotate(360deg);}}
-@-o-keyframes spinner {to {transform: rotate(360deg);}}
-@-ms-keyframes spinner {to {transform: rotate(360deg);}}
-@-moz-keyframes spinner {to {transform: rotate(360deg);}}
-@-khtml-keyframes spinner {to {transform: rotate(360deg);}}
-@-webkit-keyframes spinner {to {transform: rotate(360deg);}}
+#main { }
+}
