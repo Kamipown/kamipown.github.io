@@ -1,0 +1,42 @@
+#audioAnalyser {
+	overflow: hidden;
+	> div {
+		transition: height 250ms ease-in-out;
+		&.top {
+			background-color: $white;
+		}
+		&.middle {
+			position: relative;
+			height: 0;
+			> span {
+				position: absolute;
+				width: 8px;
+				height: 0;
+				&:nth-child(odd) {
+					bottom: 0;
+					border-radius: 4px 4px 0 0;
+					background-color: $black;
+				}
+				&:nth-child(even) {
+					top: 0;
+					background-color: $white;
+				}
+			}
+		}
+		&.bottom {
+			background-color: $black;
+		}
+	}
+	&.top {
+		> div.top { height: 80%;}
+		> div.bottom { height: 20%;}
+	}
+	&.middle {
+		> div.top { height: 50%;}
+		> div.bottom { height: 50%;}
+	}
+	&.bottom {
+		> div.top { height: 20%;}
+		> div.bottom { height: 80%;}
+	}
+}

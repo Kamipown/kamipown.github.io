@@ -1,2 +1,1 @@
-# SdlDev.github.io
-SdlDev website
+# SassMin
