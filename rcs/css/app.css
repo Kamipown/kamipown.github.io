@@ -29,7 +29,7 @@ body { background-color: #f5f5f5; transition: opacity 250ms ease-in-out;}
 
 #nav { border-top: 2px solid #d32f2f; background-color: #fff; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);}
 	#nav > div { display: flex; height: 42px;}
-		#nav > div > a { display: flex; align-items: center; padding: 0 16px; transition: all 250ms ease-in-out;}
+		#nav > div > a { display: flex; align-items: center; justify-content: center; padding: 0 16px; transition: all 250ms ease-in-out;}
 		#nav > div > a:hover { background-color: #fafafa;}
 		#nav > div > a:active { background-color: #f5f5f5; transition: none;}
 		#nav > div > a > span { width: 20px; height: 20px; background-size: cover; opacity: 0.85;}
@@ -38,6 +38,10 @@ body { background-color: #f5f5f5; transition: opacity 250ms ease-in-out;}
 		#nav > div > a[href="#training"] > span { background-image: url("../icons/training.svg");}
 		#nav > div > a[href="#skills"] > span { background-image: url("../icons/skills.svg");}
 		#nav > div > a > p { padding-left: 8px; font-weight: 300; font-size: 16px;}
+@media (max-width: 539px) {
+		#nav > div > a { flex: 1;}
+		#nav > div > a > p { display: none;}
+}
 
 #main {}
 	#main > div { padding: 0 16px 64px 16px;}
