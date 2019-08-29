@@ -9,7 +9,7 @@ body { background-color: #f5f5f5; transition: opacity 250ms ease-in-out;}
 	font-weight: 400;
 }
 
-#header { background-color: #f44336; background-image: url("../images/bg.svg"); background-size: 40px 24px; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);}
+#header { background-color: #f44336; background-image: url("../images/bg.svg"); background-size: 40px 24px;}
 	#header > div { display: flex; padding: 8px 16px;}
 		#header > div > .photo { width: 84px; height: 128px;}
 			#header > div > .photo > span { display: block; position: relative; width: 84px; height: 128px; border: 2px solid #d32f2f; border-radius: 8px; background-image: url("../images/paul.jpg"); background-size: 128px 128px; cursor: pointer; transition: all 250ms ease-in-out;}
@@ -27,14 +27,27 @@ body { background-color: #f5f5f5; transition: opacity 250ms ease-in-out;}
 				#header > div > .infos > ul > li > p { line-height: 16px; padding: 2px 0 0 8px; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); font-weight: 500; font-size: 14px; color: #fff;}
 					#header > div > .infos > ul > li > p > span { font-weight: 500; color: #fff;}
 
+#nav { border-top: 2px solid #d32f2f; background-color: #fff; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);}
+	#nav > div { display: flex; height: 42px;}
+		#nav > div > a { display: flex; align-items: center; padding: 0 16px; transition: all 250ms ease-in-out;}
+		#nav > div > a:hover { background-color: #fafafa;}
+		#nav > div > a:active { background-color: #f5f5f5; transition: none;}
+		#nav > div > a > span { width: 20px; height: 20px; background-size: cover; opacity: 0.85;}
+		#nav > div > a[href="#profile"] > span { background-image: url("../icons/profile.svg");}
+		#nav > div > a[href="#experiences"] > span { background-image: url("../icons/experiences.svg");}
+		#nav > div > a[href="#training"] > span { background-image: url("../icons/training.svg");}
+		#nav > div > a[href="#skills"] > span { background-image: url("../icons/skills.svg");}
+		#nav > div > a > p { padding-left: 8px; font-weight: 300; font-size: 16px;}
+
 #main {}
-	#main > div { padding: 0 16px 8px 16px;}
+	#main > div { padding: 0 16px 64px 16px;}
 		#main > div > section { padding-top: 64px;}
 			#main > div > section > h2 { display: flex; align-items: center;}
 				#main > div > section > h2 > span { display: block; width: 32px; height: 32px; background-size: cover;}
 				#main > div > #profile > h2 > span { background-image: url("../icons/profile.svg");}
 				#main > div > #experiences > h2 > span { background-image: url("../icons/experiences.svg");}
 				#main > div > #training > h2 > span { background-image: url("../icons/training.svg");}
+				#main > div > #skills > h2 > span { background-image: url("../icons/skills.svg");}
 				#main > div > section > h2 > p { line-height: 28px; padding-left: 16px; font-family: "Oswald"; font-weight: 300; font-size: 28px;}
 
 #profile {}
@@ -76,9 +89,13 @@ body { background-color: #f5f5f5; transition: opacity 250ms ease-in-out;}
 				#experiences > ul > li > footer > input:active { background-color: #d32f2f; transition: none;}
 
 #training {}
+	#training > p { margin-top: 32px; font-weight: 300; font-size: 16px; color: #777;}
 	#training > ul { }
 		#training > ul > li { display: flex; min-height: 120px; margin-top: 16px; padding: 8px 16px; border-radius: 4px; background-color: #fff; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);}
 			#training > ul > li > span { display: block; border-radius: 4px;}
 			#training > ul > li > div { padding-left: 16px;}
+
+#skills {}
+	#skills > p { margin-top: 32px; font-weight: 300; font-size: 16px; color: #777;}
 
 #footer {}
