@@ -9,30 +9,265 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
 		<link rel="stylesheet" type="text/css" href="./rcs/css/reset.css">
 		<link rel="stylesheet" type="text/css" href="./rcs/css/app.css">
-		<link rel="icon" type="image/png" href="./rcs/img/paulPainted.png"/>
+		<link rel="icon" type="image/png" href="./rcs/images/paul.jpg"/>
 		<title>Paul Delobbel</title>
 	</head>
 
 	<body style="opacity: 0">
-		<header>
-			<h1>Paul Delobbel</h1>
-			<nav>
-				<ul>
-					<li><a href="#">Résumé</a></li>
-					<li><a href="#web">Web Development</a></li>
-					<li><a href="#game">Game Development</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>
+		<header id="header">
+			<div class="maxWidth">
+				<div class="photo"><span></span></div>
+				<div class="infos">
+					<h1>PAUL DELOBBEL</h1>
+					<ul>
+						<li class="job">
+							<span></span>
+							<p>Développeur</p>
+						</li>
+						<li class="birth">
+							<span></span>
+							<p>20/06/1994 (<span id="age"></span> ans)</p>
+						</li>
+						<li class="location">
+							<span></span>
+							<p>Paris, France</p>
+						</li>
+						<li class="languages">
+							<span></span>
+							<p>Français, Anglais</p>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</header>
 
-		<main role="main">
-			
+		<main id="main" role="main">
+			<div class="maxWidth">
+				<section id="profile">
+					<h2>
+						<span></span>
+						<p>Profil</p>
+					</h2>
+					<p></p>
+				</section>
+				<section id="experiences">
+					<h2>
+						<span></span>
+						<p>Expériences professionnelles</p>
+					</h2>
+					<ul>
+						<li class="galadrim">
+							<header>
+								<span></span>
+								<div>
+									<h3>Développeur Full Stack</h3>
+									<p>Galadrim → <a href="https://galadrim.fr/" target="_BLANK">https://galadrim.fr/</a></p>
+									<span>Juillet 2018 - Mars 2019</span>
+								</div>
+							</header>
+							<div id="galadrimContent">
+								<div>
+									<p>Développement font-end et back-end sur des projets à courts termes (10 à 80 jours) en freelance.</p>
+									<p><span class="bold">Méthodologie</span>: Agile (scrum)</p>
+									<div class="project">
+										<h4>Quotatis</h4>
+										<p>Développement de l'application mobile Quotatis à destination des artisans et professionnels de la plateforme, en relation continue avec l'équipe back-end de la filiale.</p>
+										<ul>
+											<li>Intégration des maquettes avec InVision</li>
+											<li>Système d'authentification</li>
+											<li>Système de jobs</li>
+											<li>Mise en place d'un serveur NodeJs pour contrôler un système de notifications</li>
+										</ul>
+										<p><span class="bold">Technologies</span>: NodeJs, MySQL, Expo, React Native</p>
+										<div>
+											<a href="./rcs/images/projects/quotatis1.jpg" target="_BLANK">
+												<img src="./rcs/images/projects/quotatis1.jpg"/>
+											</a>
+											<a href="./rcs/images/projects/quotatis2.jpg" target="_BLANK">
+												<img src="./rcs/images/projects/quotatis2.jpg"/>
+											</a>
+											<a href="./rcs/images/projects/quotatis3.jpg" target="_BLANK">
+												<img src="./rcs/images/projects/quotatis3.jpg"/>
+											</a>
+											<a href="./rcs/images/projects/quotatis4.jpg" target="_BLANK">
+												<img src="./rcs/images/projects/quotatis4.jpg"/>
+											</a>
+											<a href="./rcs/images/projects/quotatis5.jpg" target="_BLANK">
+												<img src="./rcs/images/projects/quotatis5.jpg"/>
+											</a>
+										</div>
+									</div>
+									<div class="project">
+										<h4>Leadersanté</h4>
+										<p>Développement de l'application mobile Leadersanté.</p>
+										<ul>
+											<li>Intégration des maquettes avec InVision</li>
+											<li>Développement back-end</li>
+											<li>Système d'authentification</li>
+											<li>Système de marketplace et tunnel d'achat avec MangoPay</li>
+											<li>Système de fil d'actualités</li>
+											<li>Système de scan d'ordonnances</li>
+											<li>Système de prise de rendez-vous</li>
+											<li>Système de cartes de fidélité virtuelles</li>
+											<li>Système de notifications</li>
+										</ul>
+										<p><span class="bold">Technologies</span>: NodeJs, MySQL, Expo, React Native</p>
+										<p>Développement web du back office à destination des pharmaciens.</p>
+										<ul>
+											<li>Intégration des maquettes avec InVision</li>
+											<li>Développement back-end</li>
+											<li>Gestion des commandes</li>
+											<li>Gestion du fil d'actualité</li>
+											<li>Gestion des scans d'ordonnances</li>
+											<li>Gestion des rendez-vous</li>
+											<li>Gestion des notifications</li>
+										</ul>
+										<p><span class="bold">Technologies</span>: NodeJs, MySQL, Html, Css, Js</p>
+										<div>
+											<a href="./rcs/images/projects/leadersante1.jpg" target="_BLANK">
+												<img src="./rcs/images/projects/leadersante1.jpg"/>
+											</a>
+											<a href="./rcs/images/projects/leadersante2.jpg" target="_BLANK">
+												<img src="./rcs/images/projects/leadersante2.jpg"/>
+											</a>
+											<a href="./rcs/images/projects/leadersante3.jpg" target="_BLANK">
+												<img src="./rcs/images/projects/leadersante3.jpg"/>
+											</a>
+										</div>
+									</div>
+									<div class="project">
+										<h4>OpenGolfClub</h4>
+										<p>Développement d'un système de réservation de Green Fees intégré en iframe au site web.</p>
+										<ul>
+											<li>Intégration sans maquettes</li>
+											<li>Développement back-end</li>
+											<li>Système multilangues</li>
+										</ul>
+										<p><span class="bold">Technologies</span>: NodeJs, MySQL, Html, Css, Js</p>
+										<div>
+											<a href="./rcs/images/projects/opengolfclub1.png" target="_BLANK">
+												<img src="./rcs/images/projects/opengolfclub1.png"/>
+											</a>
+											<a href="./rcs/images/projects/opengolfclub2.png" target="_BLANK">
+												<img src="./rcs/images/projects/opengolfclub2.png"/>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<footer>
+								<input
+									type="button"
+									value="EN SAVOIR PLUS"
+									onclick="Ui.toggleExperience(event.target, 'galadrimContent');"
+								>
+							</footer>
+						</li>
+						<li class="cremedelacreme">
+							<header>
+								<span></span>
+								<div>
+									<h3>Développeur Front End</h3>
+									<p>Crème de la Crème → <a href="https://cremedelacreme.io/" target="_BLANK">https://cremedelacreme.io/</a></p>
+									<span>Avril 2017 - Octobre 2017</span>
+								</div>
+							</header>
+							<div id="cremedelacremeContent">
+								<div>
+									<p>Intégré au cœur de l'équipe technique pour développer la deuxième version majeure de la plateforme.</p>
+									<ul>
+										<li>Intégration des maquettes avec InVision</li>
+										<li>Développement du processus d'aquisition et refonte de l'onboarding</li>
+										<li>Développement du système multilangues</li>
+										<li>Optimisation des temps de chargement et de rendu de la plateforme</li>
+									</ul>
+									<p><span class="bold">Technologies</span>: Html, Css, Scss, Js, AngularJs, VueJs</p>
+									<p><span class="bold">Méthodologie</span>: Agile</p>
+								</div>
+							</div>
+							<footer>
+								<input
+									type="button"
+									value="EN SAVOIR PLUS"
+									onclick="Ui.toggleExperience(event.target, 'cremedelacremeContent');"
+								>
+							</footer>
+						</li>
+						<li class="kelprof">
+							<header>
+								<span></span>
+								<div>
+									<h3>Professeur d'informatique</h3>
+									<p>Kelprof → <a href="https://kelprof.com/" target="_BLANK">https://kelprof.com/</a></p>
+									<span>Novembre 2014 - Mars 2017</span>
+								</div>
+							</header>
+							<div id="kelprofContent">
+								<div>
+									<p>Cours particuliers d'informatique à travers la plateforme Kelprof.</p>
+									<ul>
+										<li>~40 élèves</li>
+										<li>12 à 40 ans</li>
+										<li>Animation d'un stage de programmation (6 élèves) en partenariat avec Parkours</li>
+									</ul>
+									<p><span class="bold">Technologies enseignées</span>: Html, Css, Js, NodeJs, SQL, MongoDB, Electron, NodeWebkit, C, C++, SDL2, SFML2, Unity</p>
+								</div>
+							</div>
+							<footer>
+								<input
+									type="button"
+									value="EN SAVOIR PLUS"
+									onclick="Ui.toggleExperience(event.target, 'kelprofContent');"
+								>
+							</footer>
+						</li>
+						<li class="cimes">
+							<header>
+								<span></span>
+								<div>
+									<h3>Développeur Front End</h3>
+									<p>Cimes Electronics → <a href="http://cimes-electronics.com/" target="_BLANK">http://cimes-electronics.com/</a></p>
+									<span>janvier 2014 - juin 2014</span>
+								</div>
+							</header>
+							<div id="cimesContent">
+								<div>
+									<p>Développement d'un système de gestion d'éclairages permettant la création et l'exécution de suites d'animations avec des lumières.</p>
+									<ul>
+										<li>Développement de l'application web from scratch</li>
+										<li>Développement du système de communication JSON-RPC avec un serveur C++</li>
+									</ul>
+									<p><span class="bold">Technologies</span>: Html, Css, Js, C++</p>
+								</div>
+							</div>
+							<footer>
+								<input
+									type="button"
+									value="EN SAVOIR PLUS"
+									onclick="Ui.toggleExperience(event.target, 'cimesContent');"
+								>
+							</footer>
+						</li>
+					</ul>
+				</section>
+				<section id="training">
+					<h2>
+						<span></span>
+						<p>Formations</p>
+					</h2>
+					<ul>
+					</ul>
+				</section>
+			</div>
 		</main>
 
-		<footer>
-
+		<footer id="footer">
+			<div class="maxWidth">
+			</div>
 		</footer>
+
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/fr.js"></script>
 		<script type="text/javascript" src="./rcs/js/app.js"></script>
 	</body>
 </html>
