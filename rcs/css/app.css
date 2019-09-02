@@ -101,5 +101,26 @@ body { background-color: #f5f5f5; transition: opacity 250ms ease-in-out;}
 
 #skills {}
 	#skills > p { margin-top: 32px; font-weight: 300; font-size: 16px; color: #777;}
+	#skills > ul {}
+		#skills > ul > li { margin-top: 32px; padding: 16px; border-radius: 4px; background-color: #fff; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);}
+		#skills > ul > li:first-child { padding-bottom: 32px;}
+			#skills > ul > li > h3 { line-height: 32px; font-weight: 500; font-size: 18px;}
+			#skills > ul > li > .skill { display: flex; margin-top: 32px;}
+				#skills > ul > li > .skill > p { width: 50px; line-height: 32px; font-weight: 300; font-size: 16px;}
+				#skills > ul > li > .skill > div { flex: 1; padding: 12px 16px 0 0;}
+					#skills > ul > li > .skill > div > .progressBar { height: 8px; border-left: 108px solid #2196F3; border-radius: 4px; background-color: #eee;}
+						#skills > ul > li > .skill > div > .progressBar > p { position: relative; height: 8px; border-radius: 0 4px 4px 0; background-color: #2196F3;}
+							#skills > ul > li > .skill > div > .progressBar > p > span { display: block; position: absolute; top: -8px; left: 100%; transform: translateX(-50%); line-height: 24px; padding: 0 16px; border-radius: 12px; background-color: #1E88E5; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); text-align: center; font-weight: 500; font-size: 12px; color: #fff;}
+					#skills > ul > li > .skill > div > .details { }
+						#skills > ul > li > .skill > div > .details > li { display: flex;}
+							#skills > ul > li > .skill > div > .details > li > p { width: 100px; line-height: 32px; font-size: 16px; transform: translateY(10px);}
+							#skills > ul > li > .skill > div > .details > li > span { width: 8px; background-color: #3F51B5;}
+							#skills > ul > li > .skill > div > .details > li > div { flex: 1; height: 8px; margin-top: 24px; background-color: #eee;}
+								#skills > ul > li > .skill > div > .details > li > div > p { position: relative; height: 8px; border-radius: 0 4px 4px 0; background-color: #3F51B5;}
+									#skills > ul > li > .skill > div > .details > li > div > p > span { display: block; position: absolute; top: -8px; left: 100%; transform: translateX(-50%); line-height: 24px; padding: 0 16px; border-radius: 12px; background-color: #3949AB; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); text-align: center; font-weight: 500; font-size: 12px; color: #fff;}
+						#skills > ul > li > .skill > div > .details > li:last-child {}
+							#skills > ul > li > .skill > div > .details > li:last-child > span { border-radius: 0 0 0 4px;}
+			#skills > ul > li > ul { margin-top: 16px;}
+				#skills > ul > li > ul > li { line-height: 32px; font-weight: 300; font-size: 16px;}
 
 #footer {}

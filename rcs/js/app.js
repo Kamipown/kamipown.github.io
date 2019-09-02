@@ -1,7 +1,7 @@
-moment.locale("fr");
+// moment.locale("fr");
 
 window.addEventListener("load", function() {
-	document.getElementById("age").innerHTML = moment().diff("1994-06-20", 'y');
+	// document.getElementById("age").innerHTML = moment().diff("1994-06-20", 'y');
 	document.body.style.opacity = 1;
 }, false);
 
