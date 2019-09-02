@@ -94,10 +94,29 @@ body { background-color: #f5f5f5; transition: opacity 250ms ease-in-out;}
 
 #training {}
 	#training > p { margin-top: 32px; font-weight: 300; font-size: 16px; color: #777;}
-	#training > ul { }
-		#training > ul > li { display: flex; min-height: 120px; margin-top: 16px; padding: 8px 16px; border-radius: 4px; background-color: #fff; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);}
-			#training > ul > li > span { display: block; border-radius: 4px;}
-			#training > ul > li > div { padding-left: 16px;}
+	#training > div { display: flex;}
+@media (max-width: 599px) {
+	#training > div { flex-direction: column;}
+}
+		#training > div > div { flex: 1; margin-top: 32px; border-radius: 4px; background-color: #fff; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);}
+@media (min-width: 600px) {
+		#training > div > div:first-child { margin-right: 16px;}
+		#training > div > div:last-child { margin-left: 16px;}
+}
+			#training > div > div > header { display: flex; padding: 16px 16px 8px 16px;}
+				#training > div > div > header > span { display: block; width: 128px; height: 64px; border: 1px solid #eee; border-radius: 4px; background-size: contain; background-repeat: no-repeat; background-position: 50% 50%;}
+				#training > div > div:first-child > header > span { background-image: url("../images/42.jpg");}
+				#training > div > div:last-child > header > span { background-image: url("../images/branly.jpg");}
+				#training > div > div > header > div { padding-left: 16px;}
+					#training > div > div > header > div > h3 { line-height: 18px; font-weight: 500; font-size: 18px;}
+					#training > div > div > header > div > p { line-height: 14px; margin-top: 8px; font-size: 14px;}
+					#training > div > div > header > div > span { display: block; line-height: 14px; margin-top: 8px; font-size: 14px;}
+			#training > div > div > ul { padding: 16px;}
+				#training > div > div > ul > li { display: flex; align-items: center;}
+					#training > div > div > ul > li > p:first-child { line-height: 32px; font-weight: 300; font-size: 16px;}
+					#training > div > div > ul > li > span { display: block; flex: 1; height: 1px; margin: 0 16px; background-color: #eee;}
+					#training > div > div > ul > li > p:last-child { line-height: 18px; font-weight: 500; font-size: 18px; color: #4CAF50;}
+						#training > div > div > ul > li > p:last-child > span { display: inline-block; line-height: 14px; margin-left: 2px; padding-top: 2px; font-weight: 300; font-size: 14px; color: #4CAF50;}
 
 #skills {}
 	#skills > p { margin-top: 32px; font-weight: 300; font-size: 16px; color: #777;}
@@ -106,7 +125,7 @@ body { background-color: #f5f5f5; transition: opacity 250ms ease-in-out;}
 		#skills > ul > li:first-child { padding-bottom: 32px;}
 			#skills > ul > li > h3 { line-height: 32px; font-weight: 500; font-size: 18px;}
 			#skills > ul > li > .skill { display: flex; margin-top: 32px;}
-				#skills > ul > li > .skill > p { width: 50px; line-height: 32px; font-weight: 300; font-size: 16px;}
+				#skills > ul > li > .skill > p { width: 50px; line-height: 32px; font-weight: 300; font-size: 18px;}
 				#skills > ul > li > .skill > div { flex: 1; padding: 12px 16px 0 0;}
 					#skills > ul > li > .skill > div > .progressBar { height: 8px; border-left: 108px solid #2196F3; border-radius: 4px; background-color: #eee;}
 						#skills > ul > li > .skill > div > .progressBar > p { position: relative; height: 8px; border-radius: 0 4px 4px 0; background-color: #2196F3;}
