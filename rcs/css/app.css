@@ -1,4 +1,4 @@
-body { background-color: #f5f5f5; transition: opacity 250ms ease-in-out;}
+body { display: flex; flex-direction: column; background-color: #fafafa; transition: opacity 250ms ease-in-out;}
 
 .maxWidth {
 	max-width: 960px;
@@ -9,26 +9,26 @@ body { background-color: #f5f5f5; transition: opacity 250ms ease-in-out;}
 	font-weight: 400;
 }
 
-#header { position: relative; z-index: 2; background-color: #f44336; background-image: url("../images/bg.svg"); background-size: 40px 24px;}
-	#header > div { display: flex; padding: 8px 16px;}
-		#header > div > .photo { width: 84px; height: 128px;}
-			#header > div > .photo > span { display: block; position: relative; width: 84px; height: 128px; border: 2px solid #d32f2f; border-radius: 8px; background-image: url("../images/paul.jpg"); background-size: 128px 128px; cursor: pointer; transition: all 250ms ease-in-out;}
-			#header > div > .photo > span:hover { box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);}
+#header { position: relative; z-index: 2; order: 1; background-color: #222; background-image: url("../images/bg.svg"); background-size: 40px 24px;}
+	#header > div { display: flex; padding: 24px 16px;}
+		#header > div > .photo { width: 92px; height: 152px;}
+			#header > div > .photo > span { display: block; position: relative; width: 92px; height: 152px; border: 2px solid #111; border-radius: 8px; background-image: url("../images/paul.jpg"); background-size: 152px 152px; cursor: pointer; transition: all 250ms ease-in-out;}
+			#header > div > .photo > span:hover { box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);}
 			#header > div > .photo > span:active { width: 256px; height: 256px; background-size: 256px 256px;}
-		#header > div > .infos { flex: 1; padding-left: 8px;}
-			#header > div > .infos > h1 { line-height: 24px; padding-top: 2px; font-size: 24px; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); font-family: "oswald"; color: #fff;}
+		#header > div > .infos { flex: 1; padding-left: 16px;}
+			#header > div > .infos > h1 { line-height: 24px; padding-top: 2px; font-size: 24px; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); font-weight: 700; color: #fff;}
 			#header > div > .infos > ul { padding-top: 4px;}
-				#header > div > .infos > ul > li { display: flex; align-items: center; padding-top: 6px;}
+				#header > div > .infos > ul > li { display: flex; align-items: center; padding-top: 12px;}
 				#header > div > .infos > ul > li > span { display: block; width: 18px; height: 18px; background-size: cover;}
 				#header > div > .infos > ul > li.job > span { background-image: url("../icons/job.svg");}
 				#header > div > .infos > ul > li.birth > span { background-image: url("../icons/cake.svg");}
 				#header > div > .infos > ul > li.location > span { background-image: url("../icons/marker.svg");}
 				#header > div > .infos > ul > li.languages > span { background-image: url("../icons/tongue.svg");}
-				#header > div > .infos > ul > li > p { line-height: 16px; padding: 2px 0 0 8px; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); font-weight: 500; font-size: 14px; color: #fff;}
+				#header > div > .infos > ul > li > p { line-height: 16px; padding: 2px 0 0 8px; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); font-weight: 500; font-size: 16px; color: #fff;}
 					#header > div > .infos > ul > li > p > span { font-weight: 500; color: #fff;}
 
-#nav { position: relative; z-index: 1; border-top: 2px solid #d32f2f; background-color: #fff; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);}
-	#nav > div { display: flex; height: 42px;}
+#nav { position: sticky; top: 0; z-index: 1; order: 2; border-top: 2px solid #111; background-color: #fff; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); user-select: none;}
+	#nav > div { display: flex; height: 48px;}
 		#nav > div > a { display: flex; align-items: center; justify-content: center; padding: 0 16px; transition: all 250ms ease-in-out;}
 		#nav > div > a:hover { background-color: #fafafa;}
 		#nav > div > a:active { background-color: #f5f5f5; transition: none;}
@@ -37,34 +37,37 @@ body { background-color: #f5f5f5; transition: opacity 250ms ease-in-out;}
 		#nav > div > a[href="#experiences"] > span { background-image: url("../icons/experiences.svg");}
 		#nav > div > a[href="#training"] > span { background-image: url("../icons/training.svg");}
 		#nav > div > a[href="#skills"] > span { background-image: url("../icons/skills.svg");}
-		#nav > div > a > p { padding-left: 8px; font-weight: 300; font-size: 16px;}
-@media (max-width: 539px) {
-		#nav > div > a { flex: 1;}
-		#nav > div > a > p { display: none;}
+		#nav > div > a > p { padding-left: 8px; font-weight: 500; font-size: 16px;}
+@media (max-width: 580px) {
+		#nav { order: 4; top: auto; bottom: 0;}
+        #nav > div > a { flex: 1;}
+    		#nav > div > a > p { display: none;}
 }
 
-#main {}
+#main { order: 3;}
 	#main > div { padding: 0 16px 64px 16px;}
 		#main > div > section { padding-top: 64px;}
 			#main > div > section > h2 { display: flex; align-items: center;}
-				#main > div > section > h2 > span { display: block; width: 32px; height: 32px; background-size: cover;}
+				#main > div > section > h2 > span { display: block; width: 28px; height: 28px; background-size: cover;}
 				#main > div > #profile > h2 > span { background-image: url("../icons/profile.svg");}
 				#main > div > #experiences > h2 > span { background-image: url("../icons/experiences.svg");}
 				#main > div > #training > h2 > span { background-image: url("../icons/training.svg");}
 				#main > div > #skills > h2 > span { background-image: url("../icons/skills.svg");}
-				#main > div > section > h2 > p { line-height: 28px; padding-left: 16px; font-family: "Oswald"; font-weight: 300; font-size: 28px;}
+				#main > div > section > h2 > p { line-height: 28px; padding-left: 16px; font-weight: 600; font-size: 24px;}
 
 #profile {}
-	#profile > p { padding-top: 16px; font-weight: 300; font-size: 16px;}
-	#profile > ul { margin-top: 8px; padding-left: 32px;}
-		#profile > ul > li { list-style-type: disc; font-weight: 300; font-size: 16px;}
+  #profile > div { padding-top: 16px;}
+  	#profile > div > p { padding-top: 8px; font-weight: 400; font-size: 16px;}
+  	#profile > div > ul { display: flex; flex-wrap: wrap; margin-top: 8px;}
+  		#profile > div > ul > li { flex: 0 0 auto; flex-wrap: wrap; line-height: 28px; margin-top: 8px; margin-right: 16px; padding: 0 16px; border-radius: 16px; border: 2px solid #222; font-weight: 500; font-size: 16px; user-select: none;}
 
 #experiences {}
 	#experiences > ul { }
-		#experiences > ul > li { margin-top: 32px; border-radius: 4px; background-color: #fff; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);}
+		#experiences > ul > li { margin-top: 32px; border-radius: 4px; background-color: #fff; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);}
 			#experiences > ul > li > header { display: flex; padding: 16px 16px 8px 16px;}
-				#experiences > ul > li > header > span { display: block; width: 64px; height: 64px; border-radius: 4px; background-size: cover;}
-				#experiences > ul > li.galadrim > header > span { background-image: url("../images/galadrim.png");}
+				#experiences > ul > li > header > span { display: block; width: 64px; height: 64px; border-radius: 8px; background-size: cover;}
+				#experiences > ul > li.trusk > header > span { background-image: url("../images/trusk.png");}
+        #experiences > ul > li.galadrim > header > span { background-image: url("../images/galadrim.png");}
 				#experiences > ul > li.cremedelacreme > header > span { background-image: url("../images/cremedelacreme.png");}
 				#experiences > ul > li.kelprof > header > span { border: 1px solid #eee; background-image: url("../images/kelprof.png");}
 				#experiences > ul > li.cimes > header > span { background-image: url("../images/cimes.png");}
@@ -77,7 +80,7 @@ body { background-color: #f5f5f5; transition: opacity 250ms ease-in-out;}
 			#experiences > ul > li > div:not(.active) { display: none;}
 			#experiences > ul > li > div.active { display: block;}
 				#experiences > ul > li > div > div { margin: 8px 0; padding: 16px; border-top: 1px solid #eee; border-bottom: 1px solid #eee;}
-					#experiences > ul > li > div > div p { font-weight: 300; font-size: 14px;}
+					#experiences > ul > li > div > div p { font-weight: 300; font-size: 16px;}
 					#experiences > ul > li > div > div p:not(:first-child) { margin-top: 16px;}
 					#experiences > ul > li > div > div ul { margin-top: 8px; padding-left: 32px;}
 						#experiences > ul > li > div > div ul > li { list-style-type: circle; font-weight: 300; font-size: 14px;}
@@ -88,9 +91,9 @@ body { background-color: #f5f5f5; transition: opacity 250ms ease-in-out;}
 							#experiences > ul > li > div > div > .project > div > a:not(:first-child) { margin-left: 16px;}
 								#experiences > ul > li > div > div > .project > div > a > img { width: 128px;}
 			#experiences > ul > li > footer { padding: 8px 16px 16px 16px; text-align: center;}
-				#experiences > ul > li > footer > input { height: 32px; padding: 0 8px; border: none; border-radius: 4px; background-color: #f44336; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); font-weight: 500; font-size: 13px; color: #fff; cursor: pointer; transition: all 250ms ease-in-out;}
-				#experiences > ul > li > footer > input:hover { background-color: #e53935;}
-				#experiences > ul > li > footer > input:active { background-color: #d32f2f; transition: none;}
+				#experiences > ul > li > footer > input { height: 32px; padding: 0 16px; border: none; border-radius: 4px; background-color: #111; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); font-weight: 500; font-size: 13px; color: #fff; cursor: pointer; transition: all 250ms ease-in-out;}
+				#experiences > ul > li > footer > input:hover { background-color: #222;}
+				#experiences > ul > li > footer > input:active { background-color: #2c2c2c; transition: none;}
 
 #training {}
 	#training > p { margin-top: 32px; font-weight: 300; font-size: 16px; color: #777;}
@@ -98,7 +101,7 @@ body { background-color: #f5f5f5; transition: opacity 250ms ease-in-out;}
 @media (max-width: 599px) {
 	#training > div { flex-direction: column;}
 }
-		#training > div > div { flex: 1; margin-top: 32px; border-radius: 4px; background-color: #fff; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);}
+		#training > div > div { flex: 1; margin-top: 32px; border-radius: 4px; background-color: #fff; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);}
 @media (min-width: 600px) {
 		#training > div > div:first-child { margin-right: 16px;}
 		#training > div > div:last-child { margin-left: 16px;}
@@ -118,25 +121,27 @@ body { background-color: #f5f5f5; transition: opacity 250ms ease-in-out;}
 					#training > div > div > ul > li > p:last-child { line-height: 18px; font-weight: 500; font-size: 18px; color: #4CAF50;}
 						#training > div > div > ul > li > p:last-child > span { display: inline-block; line-height: 14px; margin-left: 2px; padding-top: 2px; font-weight: 300; font-size: 14px; color: #4CAF50;}
 
-#skills {}
+#skills { cursor: default; }
 	#skills > p { margin-top: 32px; font-weight: 300; font-size: 16px; color: #777;}
 	#skills > ul {}
-		#skills > ul > li { margin-top: 32px; padding: 16px; border-radius: 4px; background-color: #fff; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);}
+		#skills > ul > li { margin-top: 32px; padding: 16px; border-radius: 4px; background-color: #fff; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);}
 		#skills > ul > li:first-child { padding-bottom: 32px;}
-			#skills > ul > li > h3 { line-height: 32px; font-weight: 500; font-size: 18px;}
+			#skills > ul > li > h3 { line-height: 32px; font-weight: 600; font-size: 18px;}
 			#skills > ul > li > .skill { display: flex; margin-top: 32px;}
-				#skills > ul > li > .skill > p { width: 50px; line-height: 32px; font-weight: 300; font-size: 18px;}
-				#skills > ul > li > .skill > div { flex: 1; padding: 12px 16px 0 0;}
-					#skills > ul > li > .skill > div > .progressBar { height: 8px; border-left: 108px solid #2196F3; border-radius: 4px; background-color: #eee;}
-						#skills > ul > li > .skill > div > .progressBar > p { position: relative; height: 8px; border-radius: 0 4px 4px 0; background-color: #2196F3;}
-							#skills > ul > li > .skill > div > .progressBar > p > span { display: block; position: absolute; top: -8px; left: 100%; transform: translateX(-50%); line-height: 24px; padding: 0 16px; border-radius: 12px; background-color: #1E88E5; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); text-align: center; font-weight: 500; font-size: 12px; color: #fff;}
+				#skills > ul > li > .skill > p { width: 50px; line-height: 32px; font-weight: 500; font-size: 18px;}
+				#skills > ul > li > .skill > div { flex: 1; padding: 12px 24px 0 0;}
+					#skills > ul > li > .skill > div > .progressBar { height: 8px; border-left: 108px solid #222; border-radius: 4px; background-color: #eee;}
+						#skills > ul > li > .skill > div > .progressBar > p { position: relative; height: 8px; border-radius: 0 4px 4px 0; background-color: #222;}
+							#skills > ul > li > .skill > div > .progressBar > p > span { display: block; position: absolute; top: -8px; left: 100%; transform: translateX(-50%); line-height: 24px; padding: 0 16px; border-radius: 12px; background-color: #333; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); text-align: center; font-weight: 500; font-size: 12px; color: #fff; user-select: none;}
 					#skills > ul > li > .skill > div > .details { }
 						#skills > ul > li > .skill > div > .details > li { display: flex;}
 							#skills > ul > li > .skill > div > .details > li > p { width: 100px; line-height: 32px; font-size: 16px; transform: translateY(10px);}
-							#skills > ul > li > .skill > div > .details > li > span { width: 8px; background-color: #3F51B5;}
-							#skills > ul > li > .skill > div > .details > li > div { flex: 1; height: 8px; margin-top: 24px; background-color: #eee;}
-								#skills > ul > li > .skill > div > .details > li > div > p { position: relative; height: 8px; border-radius: 0 4px 4px 0; background-color: #3F51B5;}
-									#skills > ul > li > .skill > div > .details > li > div > p > span { display: block; position: absolute; top: -8px; left: 100%; transform: translateX(-50%); line-height: 24px; padding: 0 16px; border-radius: 12px; background-color: #3949AB; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); text-align: center; font-weight: 500; font-size: 12px; color: #fff;}
+							#skills > ul > li > .skill > div > .details > li > span { width: 8px; background-color: #111;}
+							#skills > ul > li > .skill > div > .details > li > div { flex: 1; height: 8px; margin-top: 24px; background-color: #eee; user-select: none;}
+								#skills > ul > li > .skill > div > .details > li > div > p { position: relative; height: 8px; border-radius: 0 4px 4px 0; background-color: #111;}
+									#skills > ul > li > .skill > div > .details > li > div > p > span { display: block; position: absolute; top: -8px; left: 100%; transform: translateX(-50%); line-height: 24px; padding: 0 16px; border-radius: 12px; background-color: #333; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); text-align: center; font-weight: 500; font-size: 12px; color: #fff;}
+              #skills > ul > li > .skill > div > .details > li > p:hover + span + div > p > span { transform: translateX(-50%) scale(1.1);}
+                  /*#skills > ul > li > .skill > div > .details > li:hover > div > p > span {}*/
 						#skills > ul > li > .skill > div > .details > li:last-child {}
 							#skills > ul > li > .skill > div > .details > li:last-child > span { border-radius: 0 0 0 4px;}
 			#skills > ul > li > ul { margin-top: 16px;}
